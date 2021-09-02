@@ -13,14 +13,10 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('成功登入')
-    #discord.Status.<狀態>，可以是online（上線）,offline（下線）,idle（閒置）,dnd（請勿打擾）,invisible（隱身）
-    status_w = discord.Status.dnd
-
-    #這邊設定機器當前的狀態文字
-    #type可以是playing（遊玩中）、streaming（直撥中）、listening（聆聽中）、watching（觀看中）、custom（自定義）
-    activity_w = discord.Activity(type=discord.ActivityType.playing, name="吹妳老公的大雞巴")
-
-    await client.change_presence(status= status_w, activity=activity_w)
+    game = discord.streaming('吹妳老公的大雞巴')
+    #discord.Status.<狀態>，可以是online,offline,idle,dnd,invisible
+    await client.change_presence(status=discord.Status.dnd, activity=game)
+   
 
    
 @client.event
