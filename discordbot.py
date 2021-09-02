@@ -13,9 +13,9 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('成功登入')
-    game = discord.streaming('吹妳老公的大雞巴')
+    game = discord.game('吹妳老公的大雞巴')
     #discord.Status.<狀態>，可以是online,offline,idle,dnd,invisible
-    await client.change_presence(status=discord.Status.dnd, activity=game)
+    await client.change_presence(status=discord.Status.dnd, activity=streaming)
    
 
    
