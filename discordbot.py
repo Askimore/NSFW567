@@ -18,7 +18,7 @@ async def on_ready():
 
     #這邊設定機器當前的狀態文字
     #type可以是playing（遊玩中）、streaming（直撥中）、listening（聆聽中）、watching（觀看中）、custom（自定義）
-    activity_w = discord.Activity(type=discord.ActivityType.streaming,name="吹妳老公的大雞巴", url="https://cdn.discordapp.com/attachments/856925480192311307/883038733765574676/ezgif-2-e44b0f4de4b1.gif")
+    activity_w = discord.Activity(type=discord.ActivityType.streaming, name="吹妳老公的大雞巴", url="https://cdn.discordapp.com/attachments/856925480192311307/883038733765574676/ezgif-2-e44b0f4de4b1.gif")
 
     await client.change_presence(status= status_w, activity=activity_w)
 
