@@ -30,10 +30,10 @@ async def on_message(message):
         return
    
     if message.content == '跳個舞吧':
-      tmpmsg = await message.channel.send('https://cdn.discordapp.com/attachments/856925480192311307/882657302484770876/moiichan43_240835984_365616848349753_4194115607686417839_n.gif')
+      await message.channel.send('https://cdn.discordapp.com/attachments/856925480192311307/882657302484770876/moiichan43_240835984_365616848349753_4194115607686417839_n.gif')
      
    if message.content == '過來幫我吹':
-      tmpmsg = await message.channel.send('https://cdn.discordapp.com/attachments/856925480192311307/883038733765574676/ezgif-2-e44b0f4de4b1.gif')
+      await message.channel.send('https://cdn.discordapp.com/attachments/856925480192311307/883038733765574676/ezgif-2-e44b0f4de4b1.gif')
     
 # Bot起動
 client.run(TOKEN)
