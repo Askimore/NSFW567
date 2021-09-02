@@ -28,10 +28,6 @@ async def on_message(message):
     
     if message.author == client.user:
         return
-   
-    if message.content == '跳個舞吧':
-        
-    await message.channel.send('https://cdn.discordapp.com/attachments/856925480192311307/882657302484770876/moiichan43_240835984_365616848349753_4194115607686417839_n.gif')
     
     if message.content == '過來幫我吹':
         
