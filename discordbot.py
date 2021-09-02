@@ -13,21 +13,6 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('成功登入')
-    game = discord.game('吹妳老公的大雞巴')
-    #discord.Status.<狀態>，可以是online,offline,idle,dnd,invisible
-    await client.change_presence(status=discord.Status.dnd, activity=streaming)
-   
 
-   
-@client.event
-async def on_message(message):
-    
-    if message.author == client.user:
-        return
-    
-    if message.content == '過來幫我吹':
-        
-    await message.channel.send('https://cdn.discordapp.com/attachments/856925480192311307/883038733765574676/ezgif-2-e44b0f4de4b1.gif')
-    
 # Bot起動
 client.run(TOKEN)
