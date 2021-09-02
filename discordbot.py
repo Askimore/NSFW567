@@ -10,8 +10,8 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('成功登入')
-    online = discord.Game('我想瘋狂做愛')
-    await client.change_presence(status=discord.Status.idle, activity=game)
+    game = discord.Game('無限跳蛋+巨大假雞雞')
+    await client.change_presence(status=discord.Status.online, activity=game)
 
 # 收到訊息時呼叫
 @client.event
