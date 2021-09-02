@@ -13,6 +13,9 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('成功登入')
+    game = discord.Game('你的小雞雞')
+    #discord.Status.<狀態>，可以是online,offline,idle,dnd,invisible
+    await client.change_presence(status=discord.Status.dnd, activity=game)
 
 # 收到訊息時呼叫
 @client.event
