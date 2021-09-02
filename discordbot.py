@@ -11,6 +11,8 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('成功登入')
+    game = discord.game('吹妳老公的大雞巴')
+    await client.change_presence(status=discord.Status.dnd, activity=game)
 
 # Bot起動
 client.run(TOKEN)
