@@ -24,18 +24,14 @@ async def on_message(message):
     if message.author.bot:
         return
     
-    if client.user in message.mentions: # @判定
-        translator = googletrans.Translator()
-        robotName = client.user.name
-        first, space, content = message.clean_content.partition('@'+robotName+' ')
-        
-        if content == '':
-            content = first
-        if translator.detect(content).lang == DSTLanguage:
-            return
-        if translator.detect(content).lang == SRCLanguage or SRCLanguage == '':
-            remessage = translator.translate(content, dest='zh-tw').text
-            await message.reply(remessage) 
+    if(msg.content.includes("來段舞吧")){
+        var rnd = random(3,1) ;
+        switch(rnd){
+        case 1:msg.channel.replay("https://cdn.discordapp.com/attachments/856925480192311307/882657302484770876/moiichan43_240835984_365616848349753_4194115607686417839_n.gif") ;break ;
+        case 2:msg.channel.replay("https://cdn.discordapp.com/attachments/856925480192311307/864755898785857586/eWKcP6q.gif") ;break ;
+        case 3:msg.channel.replay("https://cdn.discordapp.com/attachments/856925480192311307/864755845946146816/2qblLg8.gif") ;break ;
+        }
+      }
 
 # Bot起動
 client.run(TOKEN)
