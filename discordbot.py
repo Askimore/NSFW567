@@ -13,7 +13,7 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('成功登入')
-    game = discord.Game('無線跳蛋Lush3')
+    game = discord.Game('吹你的大雞巴')
     #discord.Status.<狀態>，可以是online,offline,idle,dnd,invisible
     await client.change_presence(status=discord.Status.dnd, activity=game)
 
