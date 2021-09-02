@@ -13,9 +13,26 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('成功登入')
-     game = discord.Game('吹你的大雞巴')
-    #discord.Status.<狀態>，可以是online,offline,idle,dnd,invisible
-    await client.change_presence(status=discord.Status.dnd,activity=game)
+
+# 收到訊息時呼叫
+@client.event
+async def on_message(message):
+    # 送信者為Bot時無視
+    if message.author.bot:
+        return
+    
+    if client.user in message.mentions: # @判定
+        translator = googletrans.Translator()
+        robotName = client.user.name
+        first, space, content = message.clean_content.partition('@'+robotName+' ')
+        
+        if content == '':
+            content = first
+        if translator.detect(content).lang == DSTLanguage:
+            return
+        if translator.detect(content).lang == SRCLanguage or SRCLanguage == '':
+            remessage = translator.translate(content, dest='zh-tw').text
+            await message.reply(remessage) 
 
 # Bot起動
 client.run(TOKEN)
