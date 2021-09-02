@@ -25,7 +25,7 @@ async def on_message(message):
         return
     if client.user in message.mentions: # @判定
        robotName = client.user.name
-    if message.content == ('@'+botname+'跳舞'):
+    if message.content == ('@'+robotname+'跳舞'):
         await message.channel.send('https://cdn.discordapp.com/attachments/856925480192311307/882657302484770876/moiichan43_240835984_365616848349753_4194115607686417839_n.gif')
     
 
