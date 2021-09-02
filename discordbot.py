@@ -25,11 +25,11 @@ async def on_message(message):
         return
    
     if message.content == '跳個舞吧':
-        await asyncio.sleep(3)
+        await asyncio.wait(3)
         await message.delete()
         
         tmpmsg = await message.channel.send('https://cdn.discordapp.com/attachments/856925480192311307/882657302484770876/moiichan43_240835984_365616848349753_4194115607686417839_n.gif')
-        await asyncio.sleep(9)
+        await asyncio.wait(9)
         await tmpmsg.delete()
   
     
