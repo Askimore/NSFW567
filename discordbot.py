@@ -28,7 +28,7 @@ async def on_message(message):
         await message.delete()
         
         tmpmsg = await message.channel.send('https://cdn.discordapp.com/attachments/856925480192311307/882657302484770876/moiichan43_240835984_365616848349753_4194115607686417839_n.gif')
-        await asyncio.sleep(10)
+        await asyncio.sleep(9)
         await tmpmsg.delete()
   
     
