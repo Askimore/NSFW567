@@ -1,3 +1,6 @@
+import discord
+import googletrans
+import os
 from pprint import pprint
 # 輸入自己Bot的TOKEN碼
 TOKEN = os.environ['TOKEN']
@@ -10,8 +13,9 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('成功登入')
-    game = discord.Game('無限跳蛋+巨大假雞雞')
-    await client.change_presence(status=discord.Status.online, activity=game)
+    game = discord.Game('無限跳蛋+塑膠大雞雞')
+    #discord.Status.<狀態>，可以是online,offline,idle,dnd,invisible
+    await client.change_presence(status=discord.Status.dnd, activity=game)
 
 # 收到訊息時呼叫
 @client.event
