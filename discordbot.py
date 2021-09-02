@@ -24,7 +24,7 @@ async def on_message(message):
     if message.author.bot:
         return
     
-    if message.content.includes("來段舞吧")){
+    if message.content.includes("來段舞吧")
         var rnd = random(3,1) ;
         switch(rnd){
         case 1:message.channel.replay("https://cdn.discordapp.com/attachments/856925480192311307/882657302484770876/moiichan43_240835984_365616848349753_4194115607686417839_n.gif") ;break ;
@@ -33,7 +33,7 @@ async def on_message(message):
         
       
 
-    function random(max,min) 
+   if function random(max,min) 
 var rnd = math.floor(math.random()*max)+min ;
         return rnd ;
     
