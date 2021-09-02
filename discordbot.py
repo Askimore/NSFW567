@@ -40,7 +40,7 @@ async def on_message(message):
     if message.author == client.user:
         return
     #如果包含 ping，機器人回傳 pong
-    if message.content == 'dance':
+    if message.content == ('@'+robotname+'dance'):
         await message.channel.send('https://cdn.discordapp.com/attachments/856925480192311307/882657302484770876/moiichan43_240835984_365616848349753_4194115607686417839_n.gif')            
             
             
