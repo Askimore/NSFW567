@@ -18,7 +18,7 @@ async def on_ready():
 
     #這邊設定機器當前的狀態文字
     #type可以是playing（遊玩中）、streaming（直撥中）、listening（聆聽中）、watching（觀看中）、custom（自定義）
-    activity_w = discord.Activity(type=discord.ActivityType.streaming, name="吹妳老公的大雞巴", url="https://cdn.discordapp.com/attachments/856925480192311307/883038733765574676/ezgif-2-e44b0f4de4b1.gif")
+    activity_w = discord.Activity(type=discord.ActivityType.playing, name="吹妳老公的大雞巴")
 
     await client.change_presence(status= status_w, activity=activity_w)
 
@@ -30,7 +30,8 @@ async def on_message(message):
         return
    
     if message.content == '跳個舞吧':
- await message.channel.send('https://cdn.discordapp.com/attachments/856925480192311307/882657302484770876/moiichan43_240835984_365616848349753_4194115607686417839_n.gif')
+        
+    await message.channel.send('https://cdn.discordapp.com/attachments/856925480192311307/882657302484770876/moiichan43_240835984_365616848349753_4194115607686417839_n.gif')
 
 
 @client.event
@@ -38,8 +39,10 @@ async def on_message(message):
     
     if message.author == client.user:
         return     
-   if message.content == '過來幫我吹':
-      await message.channel.send('https://cdn.discordapp.com/attachments/856925480192311307/883038733765574676/ezgif-2-e44b0f4de4b1.gif')
+    
+    if message.content == '過來幫我吹':
+        
+    await message.channel.send('https://cdn.discordapp.com/attachments/856925480192311307/883038733765574676/ezgif-2-e44b0f4de4b1.gif')
     
 # Bot起動
 client.run(TOKEN)
