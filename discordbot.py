@@ -7,6 +7,12 @@ TOKEN = os.environ['TOKEN']
 
 client = discord.Client()
 
+def get_quote():
+  response = requests.get("https://zenquotes.io/api/random")
+  json_data = json.loads(response.text)
+  quote = json_data[0]['q'] + " -" + json_data[0]['a']
+  return(quote)
+
 # 起動時呼叫
 @client.event
 async def on_ready():
@@ -20,6 +26,16 @@ async def on_ready():
     activity_w = discord.Activity(type=discord.ActivityType.streaming, name="吹喇叭", url="https://cn.pornhub.com/view_video.php?viewkey=ph60c597d48e037")
     await client.change_presence(status= status_w, activity=activity_w)
 
+@client.event
+async def on_message(message):
+  if message.author == client.user:
+    return
+
+  if message.content.startswith('$inspire'):
+    quote = get_quote()
+    await message.channel.send(quote)
+
+    
 
 @client.event
 async def on_message(message):
