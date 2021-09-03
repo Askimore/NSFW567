@@ -1,7 +1,6 @@
 import discord
 import googletrans
 import os
-from pprint import pprintimport discord
 import requests
 import json
 import random
