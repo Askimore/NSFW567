@@ -30,11 +30,54 @@ async def on_ready():
 async def on_message(message):
   if message.author == client.user:
     return
+  
+  nsfw_words = [“sexy”, “sexy”, “騷”, “賤”, “淫”]
+  starter_encouragements = [
+  "https://cdn.discordapp.com/attachments/869984495015714856/883262887999705118/dance.gif",
+  "https://cdn.discordapp.com/attachments/856925480192311307/881587108517666816/ezgif.com-gif-maker.gif",
+  "https://cdn.discordapp.com/attachments/869984495015714856/883267153749504000/ezgif.com-gif-maker.gif"
+]
+  
+  async def on_message(message):
+  if message.author == client.user:
+    return
 
-  if message.content.startswith('$inspire'):
+  msg = message.content
+
+  if msg.startswith('$inspire'):
     quote = get_quote()
     await message.channel.send(quote)
+    
+  if any(word in msg for word in msfw_words):
+    await message.channel.send(random.choice(starter_encouragements))
+    
+    def update_encouragements(encouraging_message):
+  if "encouragements" in db.keys():
+    encouragements = db["encouragements"]
+    encouragements.append(encouraging_message)
+    db["encouragements"] = encouragements
+  else:
+    db["encouragements"] = [encouraging_message]
 
+def delete_encouragment(index):
+  encouragements = db["encouragements"]
+  if len(encouragements) > index:
+    del encouragements[index]
+  db["encouragements"] = encouragements
+  
+  def update_encouragements(encouraging_message):
+  if "encouragements" in db.keys():
+    encouragements = db["encouragements"]
+    encouragements.append(encouraging_message)
+    db["encouragements"] = encouragements
+  else:
+    db["encouragements"] = [encouraging_message]
+
+def delete_encouragment(index):
+  encouragements = db["encouragements"]
+  if len(encouragements) > index:
+    del encouragements[index]
+  db["encouragements"] = encouragements
     
 
 @client.event
@@ -44,7 +87,7 @@ async def on_message(message):
 
     if message.content.startswith('跳個舞吧'):
         await message.channel.send('https://cdn.discordapp.com/attachments/869984495015714856/883262887999705118/dance.gif')  
-        await asyncio.sleep(3)
+        await asyncio.sleep(9)
         await message.delete()
 
 
