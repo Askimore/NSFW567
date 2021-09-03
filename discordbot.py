@@ -11,9 +11,9 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('成功登入')
-    game = discord.custom('吹喇叭')
+    status_w = discord.Status.dnd
     #discord.Status.<狀態>，可以是online,offline,idle,dnd,invisible
-    await client.change_presence(status=discord.Status.dnd, activity=game)
+    activity_w = discord.Activity(type=discord.ActivityType.streaming, name="吹喇叭", url="https://cn.pornhub.com/view_video.php?viewkey=ph60c597d48e037")
 
 @client.event
 async def on_message(message):
