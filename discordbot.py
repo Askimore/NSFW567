@@ -14,7 +14,27 @@ sad_words = ["$nsfw"]
 starter_encouragements = [
   "https://cdn.discordapp.com/attachments/856925480192311307/881587108517666816/ezgif.com-gif-maker.gif",
   "https://cdn.discordapp.com/attachments/869984495015714856/883262887999705118/dance.gif",
-  "https://cdn.discordapp.com/attachments/869984495015714856/883267153749504000/ezgif.com-gif-maker.gif"
+  "https://cdn.discordapp.com/attachments/869984495015714856/883267153749504000/ezgif.com-gif-maker.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883321268080898088/tumblr_pimzxziPII1s5y4eao1_540.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883326607182397440/O2uwYdh.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883326643597344768/6ec8dbfa455c264bae6e6befa6f0a4f7.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883326657136586792/unnamed.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883326660366204958/EVaI6co.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883326666162729000/i015483469263.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883326666678632478/2qblLg8.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883326673804738571/15774792791983.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883326678120669194/932e415bdd57f45aab9d64f28a158ff0.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883326681388052550/img.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883326683078336542/3516f6d3a6db9914e54c40b10c96297b.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883326688753221632/ze23kA1.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883326689193656352/1.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883326700354699294/i15221404105.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883326707182993408/eWKcP6q.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883326714049101875/BwSzfXo.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883326729169535056/8fef5380dd25d6a76c0f252028ab2f34_1605864535_4979.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883326734638931979/b397a99b60df692fb1870e96949b1542.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883326738539626506/KL8M4i7.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883326739332333598/i15538808604.gif"
 ]
 
 # 起動時呼叫
