@@ -2,12 +2,20 @@
 import discord
 import googletrans
 import os
+import random
 from pprint import pprint
-
 # 輸入自己Bot的TOKEN碼
 TOKEN = os.environ['TOKEN']
 
 client = discord.Client()
+
+sad_words = ["nsfw"]
+
+starter_encouragements = [
+  "https://cdn.discordapp.com/attachments/856925480192311307/881587108517666816/ezgif.com-gif-maker.gif",
+  "https://cdn.discordapp.com/attachments/869984495015714856/883262887999705118/dance.gif",
+  "https://cdn.discordapp.com/attachments/869984495015714856/883267153749504000/ezgif.com-gif-maker.gif"
+]
 
 # 起動時呼叫
 @client.event
@@ -24,13 +32,6 @@ async def on_ready():
 
     
 @client.event
-sad_words = ["nsfw"]
-starter_encouragements = [
-  "https://cdn.discordapp.com/attachments/856925480192311307/881587108517666816/ezgif.com-gif-maker.gif",
-  "https://cdn.discordapp.com/attachments/869984495015714856/883262887999705118/dance.gif",
-  "https://cdn.discordapp.com/attachments/869984495015714856/883267153749504000/ezgif.com-gif-maker.gif"
-]
-
 async def on_message(message):
   if message.author == client.user:
     return
