@@ -48,7 +48,7 @@ async def on_message(message):
     quote = get_quote()
     await message.channel.send(quote)
     
-  if any(word in msg for word in msfw_words):
+  if any(word in msg for word in nsfw_words):
     await message.channel.send(random.choice(starter_encouragements))
     
     def update_encouragements(encouraging_message):
