@@ -43,7 +43,10 @@ async def on_message(message):
         return
 
     if message.content.startswith('跳個舞吧'):
-        await message.channel.send('https://cdn.discordapp.com/attachments/869984495015714856/883262887999705118/dance.gif')    
+        await message.channel.send('https://cdn.discordapp.com/attachments/869984495015714856/883262887999705118/dance.gif')  
+        await asyncio.sleep(3)
+        await message.delete()
+
 
     
 # Bot起動
