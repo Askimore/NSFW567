@@ -31,59 +31,28 @@ async def on_ready():
     activity_w = discord.Activity(type=discord.ActivityType.streaming, name="吹喇叭", url="https://cn.pornhub.com/view_video.php?viewkey=ph60c597d48e037")
     await client.change_presence(status= status_w, activity=activity_w)
 
+    
+@client.event
 sad_words = ["nsfw"]
-
 starter_encouragements = [
   "https://cdn.discordapp.com/attachments/856925480192311307/881587108517666816/ezgif.com-gif-maker.gif",
   "https://cdn.discordapp.com/attachments/869984495015714856/883262887999705118/dance.gif",
   "https://cdn.discordapp.com/attachments/869984495015714856/883267153749504000/ezgif.com-gif-maker.gif"
 ]
 
-if "responding" not in db.keys():
-  db["responding"] = True
-
-def get_quote():
-  response = requests.get("https://zenquotes.io/api/random")
-  json_data = json.loads(response.text)
-  quote = json_data[0]["q"] + " -" + json_data[0]["a"]
-  return(quote)
-
-def update_encouragements(encouraging_message):
-  if "encouragements" in db.keys():
-    encouragements = db["encouragements"]
-    encouragements.append(encouraging_message)
-    db["encouragements"] = encouragements
-  else:
-    db["encouragements"] = [encouraging_message]
-
-def delete_encouragment(index):
-  encouragements = db["encouragements"]
-  if len(encouragements) > index:
-    del encouragements[index]
-  db["encouragements"] = encouragements
-
-@client.event
-async def on_ready():
-  print("We have logged in as {0.user}".format(client))
-
-@client.event
 async def on_message(message):
   if message.author == client.user:
     return
 
   msg = message.content
 
-  if msg.startswith("$inspire"):
+  if msg.startswith('$inspire'):
     quote = get_quote()
     await message.channel.send(quote)
+    
+  if any(word in msg for word in sad_words):
+    await message.channel.send(random.choice(starter_encouragements))
 
-  if db["responding"]:
-    options = starter_encouragements
-    if "encouragements" in db.keys():
-      options = options + db["encouragements"]
-
-    if any(word in msg for word in sad_words):
-      await message.channel.send(random.choice(options))
     
 # Bot起動
 client.run(TOKEN)
