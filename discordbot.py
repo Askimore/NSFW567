@@ -1,7 +1,12 @@
 import discord
 import googletrans
 import os
-from pprint import pprint
+from pprint import pprintimport discord
+import requests
+import json
+import random
+from replit import db
+
 # 輸入自己Bot的TOKEN碼
 TOKEN = os.environ['TOKEN']
 
