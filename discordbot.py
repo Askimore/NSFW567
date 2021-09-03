@@ -26,16 +26,7 @@ async def on_ready():
     activity_w = discord.Activity(type=discord.ActivityType.streaming, name="吹喇叭", url="https://cn.pornhub.com/view_video.php?viewkey=ph60c597d48e037")
     await client.change_presence(status= status_w, activity=activity_w)
 
-import discord
-import os
-import requests
-import json
-import random
-from replit import db
-
-client = discord.Client()
-
-sad_words = ["sad", "depressed", "unhappy", "angry", "miserable"]
+sad_words = ["nsfw"]
 
 starter_encouragements = [
   "https://cdn.discordapp.com/attachments/856925480192311307/881587108517666816/ezgif.com-gif-maker.gif",
@@ -69,6 +60,25 @@ def delete_encouragment(index):
 @client.event
 async def on_ready():
   print("We have logged in as {0.user}".format(client))
+
+@client.event
+async def on_message(message):
+  if message.author == client.user:
+    return
+
+  msg = message.content
+
+  if msg.startswith("$inspire"):
+    quote = get_quote()
+    await message.channel.send(quote)
+
+  if db["responding"]:
+    options = starter_encouragements
+    if "encouragements" in db.keys():
+      options = options + db["encouragements"]
+
+    if any(word in msg for word in sad_words):
+      await message.channel.send(random.choice(options))
     
 # Bot起動
 client.run(TOKEN)
