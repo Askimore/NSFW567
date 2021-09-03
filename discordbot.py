@@ -26,8 +26,8 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('幫我口交'):
-        await message.channel.send('https://cdn.discordapp.com/attachments/856925480192311307/856951219015516220/ezgif-2-e44b0f4de4b1.gif')    
+    if message.content.startswith('跳個舞吧'):
+        await message.channel.send('https://cdn.discordapp.com/attachments/869984495015714856/883262887999705118/dance.gif')    
 
     
 # Bot起動
