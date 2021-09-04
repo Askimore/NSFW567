@@ -168,6 +168,16 @@ async def on_message(message):
     time.sleep(5)
     await tmpmsg.delete()
 
+@client.event
+async def on_message(message):
+  if message.author == client.user:
+    return
+
+  msg = message.content
+
+  if msg.startswith('$inspire'):
+    quote = get_quote()
+    await message.channel.send(quote)
    
 
   if any(word in msg for word in jpg_words):
