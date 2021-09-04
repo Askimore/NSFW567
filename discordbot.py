@@ -282,7 +282,7 @@ async def on_message(message):
     await message.delete()
     time.sleep(30)
     await tmpmsg.delete()
-    tmpmsg = await message.channel.send('出來了沒❤')
+    tmpmsg = await message.channel.send('出來了嗎？❤')
     time.sleep(5)
     await tmpmsg.delete()  
 
@@ -291,7 +291,7 @@ async def on_message(message):
     await message.delete()
     time.sleep(10)
     await tmpmsg.delete()
-    tmpmsg = await message.channel.send('出來了沒❤')
+    tmpmsg = await message.channel.send('出來了沒？❤')
     time.sleep(5)
     await tmpmsg.delete()
 
