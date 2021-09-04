@@ -279,23 +279,34 @@ async def on_message(message):
     await message.channel.send(quote)
   
   
-   if any(word in msg for word in sad_words):
-     gifmsg = await message.channel.send(random.choice(starter_encouragements))
-     await message.delete()
-     time.sleep(30)
-     await gifmsg.delete()
-     ansmsg = await message.channel.send('出來了嗎？❤')
-     time.sleep(5)
-     await ansmsg.delete()  
+@client.event
+async def on_message(message):
+  if message.author == client.user:
+    return
 
-   if any(word in msg for word in jpg_words):
-     jpgmsg = await message.channel.send(random.choice(jpg))
-     await message.delete()
-     time.sleep(10)
-     await jpgmsg.delete()
-     ansmsg = await message.channel.send('好色唷❤')
-     time.sleep(5)
-     await ansmsg.delete()
+  msg = message.content
+
+  if msg.startswith('$inspire'):
+    quote = get_quote()
+    await message.channel.send(quote)
+    
+  if any(word in msg for word in sad_words):
+    gifmsg = await message.channel.send(random.choice(starter_encouragements))
+    await message.delete()
+    time.sleep(30)
+    await gifmsg.delete()
+    ansmsg = await message.channel.send('出來了嗎？❤')
+    time.sleep(5)
+    await ansmsg.delete()  
+
+  if any(word in msg for word in jpg_words):
+    jpgmsg = await message.channel.send(random.choice(jpg))
+    await message.delete()
+    time.sleep(10)
+    await jpgmsg.delete()
+    anmmsg = await message.channel.send('好色唷❤')
+    time.sleep(5)
+    await anmmsg.delete()
 
   
 # Bot起動
