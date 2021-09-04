@@ -162,6 +162,7 @@ async def on_message(message):
     
   if any(word in msg for word in sad_words):
     tmpmsg = await message.channel.send(random.choice(starter_encouragements))
+    await message.delete()
     time.sleep(60)
     await tmpmsg.delete()
     tmpmsg = await message.channel.send('出來了沒❤')
@@ -182,6 +183,7 @@ async def on_message(message):
 
   if any(word in msg for word in jpg_words):
     tmpmsg = await message.channel.send(random.choice(jpg))
+    await message.delete()
     time.sleep(30)
     await tmpmsg.delete()
     tmpmsg = await message.channel.send('出來了沒❤')
