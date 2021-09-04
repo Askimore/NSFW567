@@ -105,7 +105,7 @@ gif = [
   "https://cdn.discordapp.com/attachments/883316057283108924/883391693272014889/ezgif.com-gif-maker_32.gif",
   "https://cdn.discordapp.com/attachments/883316057283108924/883391702172327967/ezgif.com-gif-maker_12.gif",
   "https://cdn.discordapp.com/attachments/883316057283108924/883392529943392306/ezgif.com-gif-maker67.gif",
-  "https://cdn.discordapp.com/attachments/883316057283108924/883392501388558346/ezgif.com-gif-maker68.gif"
+  "https://cdn.discordapp.com/attachments/883316057283108924/883392501388558346/ezgif.com-gif-maker68.gif",
   "https://cdn.discordapp.com/attachments/883316057283108924/883531577617960960/image0.gif",
   "https://cdn.discordapp.com/attachments/883316057283108924/883550684040032357/image0.gif",
   "https://s6.ezgif.com/save/ezgif-6-3aae739194a3.gif",
