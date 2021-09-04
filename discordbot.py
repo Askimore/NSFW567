@@ -106,7 +106,24 @@ starter_encouragements = [
   "https://cdn.discordapp.com/attachments/883316057283108924/883391693272014889/ezgif.com-gif-maker_32.gif",
   "https://cdn.discordapp.com/attachments/883316057283108924/883391702172327967/ezgif.com-gif-maker_12.gif",
   "https://cdn.discordapp.com/attachments/883316057283108924/883392529943392306/ezgif.com-gif-maker67.gif",
-  "https://cdn.discordapp.com/attachments/883316057283108924/883392501388558346/ezgif.com-gif-maker68.gif"
+  "https://cdn.discordapp.com/attachments/883316057283108924/883392501388558346/ezgif.com-gif-maker68.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883531577617960960/image0.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883550684040032357/image0.gif",
+  "https://s6.ezgif.com/save/ezgif-6-3aae739194a3.gif",
+  "https://s6.ezgif.com/save/ezgif-6-8f7f8fab00b6.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883572400124485652/210904_6.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883572422060671036/210904_2.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883572426670239744/210904_5.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883572444818993183/210904_4.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883572453014646814/210904_11.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883572455808061490/210904_1.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883572470123208765/210904_8.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883572470865604628/210904_7.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883572474896330812/210904_10.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883572477970767872/210904_9.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883572907563941908/image0.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883578591898652762/210904_12.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883578599272235048/210904_13.gif"
   
 ]
 
