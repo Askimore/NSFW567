@@ -10,7 +10,10 @@ client = discord.Client()
 
 sad_words = ["$nsfw"]
 
+jpg_words = ["$jpg"]
+
 starter_encouragements = [
+  
   "https://cdn.discordapp.com/attachments/856925480192311307/881587108517666816/ezgif.com-gif-maker.gif",
   "https://cdn.discordapp.com/attachments/869984495015714856/883262887999705118/dance.gif",
   "https://cdn.discordapp.com/attachments/869984495015714856/883267153749504000/ezgif.com-gif-maker.gif",
@@ -102,7 +105,14 @@ starter_encouragements = [
   "https://cdn.discordapp.com/attachments/883316057283108924/883391693272014889/ezgif.com-gif-maker_32.gif",
   "https://cdn.discordapp.com/attachments/883316057283108924/883391702172327967/ezgif.com-gif-maker_12.gif",
   "https://cdn.discordapp.com/attachments/883316057283108924/883392529943392306/ezgif.com-gif-maker67.gif",
-  "https://cdn.discordapp.com/attachments/883316057283108924/883392501388558346/ezgif.com-gif-maker68.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883392501388558346/ezgif.com-gif-maker68.gif"
+  
+]
+
+jpg = [
+  
+  "https://cdn.discordapp.com/attachments/883582213424291861/883582259863621662/tumblr_ozir9nTp2a1vf91eio9_1280.jpg",
+  "https://cdn.discordapp.com/attachments/883582213424291861/883582356517158932/tumblr_ozjql1COr01vf91eio5_1280.jpg"
   
 ]
 
@@ -134,6 +144,9 @@ async def on_message(message):
   if any(word in msg for word in sad_words):
     await message.channel.send(random.choice(starter_encouragements))
 
+  if any(word in msg for word in jpg_words):
+    await message.channel.send(random.choice(jpg))
+    
     
 # Bot起動
 client.run(TOKEN)
