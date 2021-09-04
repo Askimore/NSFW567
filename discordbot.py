@@ -10,6 +10,7 @@ TOKEN = os.environ['TOKEN']
 client = discord.Client()
 
 sad_words = ["$nsfw"]
+happy_words = ["$jpg"]
 
 starter_encouragements = [
   "https://cdn.discordapp.com/attachments/856925480192311307/881587108517666816/ezgif.com-gif-maker.gif",
@@ -120,8 +121,12 @@ starter_encouragements = [
   "https://cdn.discordapp.com/attachments/883316057283108924/883572477970767872/210904_9.gif",
   "https://cdn.discordapp.com/attachments/883316057283108924/883572907563941908/image0.gif",
   "https://cdn.discordapp.com/attachments/883316057283108924/883578591898652762/210904_12.gif",
-  "https://cdn.discordapp.com/attachments/883316057283108924/883578599272235048/210904_13.gif",
+  "https://cdn.discordapp.com/attachments/883316057283108924/883578599272235048/210904_13.gif"
   
+]
+
+starter_encouragements = [
+
 ]
 
 # 起動時呼叫
