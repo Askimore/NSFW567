@@ -163,19 +163,15 @@ async def on_message(message):
   if any(word in msg for word in sad_words):
     await message.channel.send(random.choice(starter_encouragements))
     tmpmsg = await message.channel.send('死色鬼')
-    await time.sleep(3)
-    await tmpmsg.delete()
-    await time.sleep(60)
-    await message.delete()
-    
+    await tmpmsg.delete().time.sleep(3)
+    await message.delete().time.sleep(30)
+   
 
   if any(word in msg for word in jpg_words):
     await message.channel.send(random.choice(jpg))
     tmpmsg = await message.channel.send('死色鬼')
-    await time.sleep(3)
-    await tmpmsg.delete()
-    await time.sleep(60)
-    await message.delete()
+    await tmpmsg.delete().time.sleep(3)
+    await message.delete().time.sleep(30)
 
       
   
