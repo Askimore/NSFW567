@@ -284,19 +284,7 @@ async def on_message(message):
     await tmpmsg.delete()
     tmpmsg = await message.channel.send('出來了沒❤')
     time.sleep(5)
-    await tmpmsg.delete()
-
-@client.event
-async def on_message(message):
-  if message.author == client.user:
-    return
-
-  msg = message.content
-
-  if msg.startswith('$inspire'):
-    quote = get_quote()
-    await message.channel.send(quote)
-   
+    await tmpmsg.delete()  
 
   if any(word in msg for word in jpg_words):
     tmpmsg = await message.channel.send(random.choice(jpg))
