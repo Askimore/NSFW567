@@ -1,5 +1,4 @@
-  
-import discord
+  import discord
 import googletrans
 import os
 import random
@@ -8,8 +7,6 @@ from pprint import pprint
 TOKEN = os.environ['TOKEN']
 
 client = discord.Client()
-
-jpg_words = ["$jpg"]
 
 sad_words = ["$nsfw"]
 
@@ -126,13 +123,6 @@ starter_encouragements = [
   
 ]
 
-jpg = [
-
-  "https://cdn.discordapp.com/attachments/883582213424291861/883592199386853387/015_E2JwMMjVEAMj8Vq.jpg",
-  "https://cdn.discordapp.com/attachments/883582213424291861/883592199537831936/016_E2JwMMjVkAArVy1.jpg"
-  
-]
-
 # 起動時呼叫
 @client.event
 async def on_ready():
@@ -143,7 +133,7 @@ async def on_ready():
 
     #這邊設定機器當前的狀態文字
     #type可以是playing（遊玩中）、streaming（直撥中）、listening（聆聽中）、watching（觀看中）、custom（自定義）
-    activity_w = discord.Activity(type=discord.ActivityType.playing, name="你的臭雞雞", url="https://cdn.discordapp.com/attachments/883316057283108924/883572907563941908/image0.gif")
+    activity_w = discord.Activity(type=discord.ActivityType.streaming, name="吹喇叭", url="https://cn.pornhub.com/view_video.php?viewkey=ph60c597d48e037")
     await client.change_presence(status= status_w, activity=activity_w)
 
     
@@ -160,20 +150,7 @@ async def on_message(message):
     
   if any(word in msg for word in sad_words):
     await message.channel.send(random.choice(starter_encouragements))
-    
-@client.event
-async def on_message(message):
-  if message.author == client.user:
-    return
 
-  msg = message.content
-
-  if msg.startswith('$inspire'):
-    quote = get_quote()
-    await message.channel.send(quote)
-    
-  if any(word in msg for word in jpg_words):
-    await message.channel.send(random.choice(jpg))    
     
 # Bot起動
 client.run(TOKEN)
