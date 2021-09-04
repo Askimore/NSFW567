@@ -1,4 +1,5 @@
-  import discord
+
+import discord
 import googletrans
 import os
 import random
