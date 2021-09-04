@@ -165,17 +165,17 @@ async def on_message(message):
     tmpmsg = await message.channel.send('死色鬼')
     time.sleep(3)
     await tmpmsg.delete()
-    time.sleep(27)
+    time.sleep(60)
     await message.delete()
    
 
   if any(word in msg for word in jpg_words):
     await message.channel.send(random.choice(jpg))
-    tmpmsg = await message.channel.send('死色鬼')
+    time.sleep(30)
+    await message.delete()
+    tmpmsg = await message.channel.send('出來了沒❤')
     time.sleep(3)
     await tmpmsg.delete()
-    time.sleep(27)
-    await message.delete()
 
       
   
