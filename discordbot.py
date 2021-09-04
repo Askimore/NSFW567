@@ -265,7 +265,8 @@ async def on_ready():
     activity_w = discord.Activity(type=discord.ActivityType.playing, name="你的臭雞雞", url="https://cn.pornhub.com/view_video.php?viewkey=ph60c597d48e037")
     await client.change_presence(status= status_w, activity=activity_w)
 
-    
+
+      
 @client.event
 async def on_message(message):
   if message.author == client.user:
@@ -276,26 +277,26 @@ async def on_message(message):
   if msg.startswith('$inspire'):
     quote = get_quote()
     await message.channel.send(quote)
-    
-  if any(word in msg for word in sad_words):
-    gifmsg = await message.channel.send(random.choice(starter_encouragements))
-    await message.delete()
-    time.sleep(30)
-    await gifmsg.delete()
-    ansmsg = await message.channel.send('出來了嗎？❤')
-    time.sleep(5)
-    await ansmsg.delete()  
+  
+  
+   if any(word in msg for word in sad_words):
+     gifmsg = await message.channel.send(random.choice(starter_encouragements))
+     await message.delete()
+     time.sleep(30)
+     await gifmsg.delete()
+     ansmsg = await message.channel.send('出來了嗎？❤')
+     time.sleep(5)
+     await ansmsg.delete()  
 
-  if any(word in msg for word in jpg_words):
-    jpgmsg = await message.channel.send(random.choice(jpg))
-    await message.delete()
-    time.sleep(10)
-    await jpgmsg.delete()
-    ansmsg = await message.channel.send('出來了沒？❤')
-    time.sleep(5)
-    await ansmsg.delete()
+   if any(word in msg for word in jpg_words):
+     jpgmsg = await message.channel.send(random.choice(jpg))
+     await message.delete()
+     time.sleep(10)
+     await jpgmsg.delete()
+     ansmsg = await message.channel.send('好色唷❤')
+     time.sleep(5)
+     await ansmsg.delete()
 
-      
   
 # Bot起動
 client.run(TOKEN)
