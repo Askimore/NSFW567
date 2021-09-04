@@ -9,10 +9,10 @@ TOKEN = os.environ['TOKEN']
 
 client = discord.Client()
 
-gif_words = ["$nsfw"]
+nsfw_words = ["$nsfw"]
 jpg_words = ["$jpg"]
 
-gif = [
+nsfw = [
   "https://cdn.discordapp.com/attachments/856925480192311307/881587108517666816/ezgif.com-gif-maker.gif",
   "https://cdn.discordapp.com/attachments/869984495015714856/883262887999705118/dance.gif",
   "https://cdn.discordapp.com/attachments/869984495015714856/883267153749504000/ezgif.com-gif-maker.gif",
@@ -157,8 +157,8 @@ async def on_message(message):
     quote = get_quote()
     await message.channel.send(quote)
     
-  if any(word in msg for word in gif_words):
-    await message.channel.send(random.choice(gif))
+  if any(word in msg for word in nsfw_words):
+    await message.channel.send(random.choice(nsfw))
 
     
 @client.event
