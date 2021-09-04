@@ -149,5 +149,14 @@ async def on_message(message):
     await message.channel.send(random.choice(jpg))
     
     
+        tmpmsg = await message.channel.send('死色鬼')
+        #停頓3秒
+        await asyncio.sleep(60)
+        #刪除訊息
+        await tmpmsg.delete()
+        await message.delete()
+  
+  
+  
 # Bot起動
 client.run(TOKEN)
