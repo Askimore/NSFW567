@@ -161,19 +161,20 @@ async def on_message(message):
     
   if any(word in msg for word in sad_words):
     await message.channel.send(random.choice(starter_encouragements))
+    tmpmsg = await message.channel.send('死色鬼')
+    await asyncio.sleep(3)
+    await tmpmsg.delete()
+    await message.delete()
+    
 
   if any(word in msg for word in jpg_words):
     await message.channel.send(random.choice(jpg))
-    
-    
-        tmpmsg = await message.channel.send('死色鬼')
-        #停頓3秒
-        await asyncio.sleep(60)
-        #刪除訊息
-        await tmpmsg.delete()
-        await message.delete()
-  
-  
+    tmpmsg = await message.channel.send('死色鬼')
+    await asyncio.sleep(3)
+    await tmpmsg.delete()
+    await message.delete()
+
+      
   
 # Bot起動
 client.run(TOKEN)
