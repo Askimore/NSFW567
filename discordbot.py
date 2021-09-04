@@ -3,6 +3,7 @@ import discord
 import googletrans
 import os
 import random
+import time
 from pprint import pprint
 # 輸入自己Bot的TOKEN碼
 TOKEN = os.environ['TOKEN']
@@ -162,16 +163,18 @@ async def on_message(message):
   if any(word in msg for word in sad_words):
     await message.channel.send(random.choice(starter_encouragements))
     tmpmsg = await message.channel.send('死色鬼')
-    await asyncio.sleep(3)
+    await time.sleep(3)
     await tmpmsg.delete()
+    await time.sleep(60)
     await message.delete()
     
 
   if any(word in msg for word in jpg_words):
     await message.channel.send(random.choice(jpg))
     tmpmsg = await message.channel.send('死色鬼')
-    await asyncio.sleep(3)
+    await time.sleep(3)
     await tmpmsg.delete()
+    await time.sleep(60)
     await message.delete()
 
       
