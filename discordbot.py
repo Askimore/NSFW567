@@ -9,11 +9,11 @@ TOKEN = os.environ['TOKEN']
 
 client = discord.Client()
 
-sad_words = ["$nsfw"]
+gif_words = ["$nsfw"]
 
 jpg_words = ["$jpg"]
 
-starter_encouragements = [
+gif = [
   "https://cdn.discordapp.com/attachments/856925480192311307/881587108517666816/ezgif.com-gif-maker.gif",
   "https://cdn.discordapp.com/attachments/869984495015714856/883262887999705118/dance.gif",
   "https://cdn.discordapp.com/attachments/869984495015714856/883267153749504000/ezgif.com-gif-maker.gif",
@@ -122,9 +122,8 @@ starter_encouragements = [
   "https://cdn.discordapp.com/attachments/883316057283108924/883572477970767872/210904_9.gif",
   "https://cdn.discordapp.com/attachments/883316057283108924/883572907563941908/image0.gif",
   "https://cdn.discordapp.com/attachments/883316057283108924/883578591898652762/210904_12.gif",
-  "https://cdn.discordapp.com/attachments/883316057283108924/883578599272235048/210904_13.gif",
-  
-  
+  "https://cdn.discordapp.com/attachments/883316057283108924/883578599272235048/210904_13.gif"
+    
 ]
 
 jpg = [
@@ -159,8 +158,8 @@ async def on_message(message):
     quote = get_quote()
     await message.channel.send(quote)
     
-  if any(word in msg for word in sad_words):
-    await message.channel.send(random.choice(starter_encouragements))
+  if any(word in msg for word in gif_words):
+    await message.channel.send(random.choice(gif))
 
     
 @client.event
