@@ -256,13 +256,6 @@ jpg = [
 ]
 
 
-def get_photo():
-a = csv.reader(open(‘https://github.com/Askimore/NSFW567/blob/main/mp4.csv’,‘r’,encoding=‘UTF-8’))
-b = []
-for i in a:
-b.append(",".join(i))
-c = message.channel.send(random.choice(b)
-
 
 # 起動時呼叫
 @client.event
@@ -320,15 +313,5 @@ async def on_message(message):
     time.sleep(5)
     await bbbmsg.delete()
 
-    
-  if any(word in msg for word in mov_words):
-    movmsg = await c
-    await message.delete()
-    time.sleep(120)
-    await movmsg.delete()
-    cccmsg = await message.channel.send('要壞掉了啦❤')
-    time.sleep(5)
-    await cccmsg.delete()
-    
 # Bot起動
 client.run(TOKEN)
