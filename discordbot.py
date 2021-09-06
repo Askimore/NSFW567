@@ -15,7 +15,10 @@ sad_words = ["$nsfw"]
 
 jpg_words = ["$jpg"]
 
+mp4_words = ["$mp4"]
+
 file = 'mp4.csv'
+
 with open(file) as csvFile:
     csvReader = csv.DictReader(csvFile)
     for data in csvReader:
@@ -314,6 +317,15 @@ async def on_message(message):
     anmmsg = await message.channel.send('好色唷❤')
     time.sleep(5)
     await anmmsg.delete()
+    
+  if any(word in msg for word in mp4_words):
+    gifmsg = await message.channel.send(random.choice(file))
+    await message.delete()
+    time.sleep(120)
+    await gifmsg.delete()
+    ansmsg = await message.channel.send('出來了嗎？❤')
+    time.sleep(5)
+    await ansmsg.delete()   
 
   
 # Bot起動
