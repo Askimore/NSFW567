@@ -2,6 +2,7 @@
 import discord
 import googletrans
 import os
+import csv
 import random
 import time
 from pprint import pprint
@@ -310,12 +311,10 @@ async def on_message(message):
     time.sleep(5)
     await anmmsg.delete()
    
-path = 'mp4.txt'
-with open(path) as f:
-for line in f.readlines():
-  
 if any(word in msg for word in mov_words):    
-  random.print(line)
+with open(mp4.csv) as f:
+    reader = csv.reader(f)
+    chosen_row = random.choice(list(reader))
 
         
     
