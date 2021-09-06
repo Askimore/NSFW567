@@ -314,7 +314,7 @@ async def on_message(message):
 if any(word in msg for word in mov_words):    
 with open(mp4.csv) as f:
     reader = csv.reader(f)
-    chosen_row = random.choice(list(reader))
+    await message.channel.send(random.choice(list(reader)))
 
         
     
