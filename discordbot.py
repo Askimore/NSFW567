@@ -257,7 +257,7 @@ jpg = [
 
 
 def get_photo():
-a = csv.reader(open(‘data/photo.csv’,‘r’,encoding=‘UTF-8’))
+a = csv.reader(open(‘mp4.csv’,‘r’,encoding=‘UTF-8’))
 b = []
 for i in a:
 b.append(",".join(i))
