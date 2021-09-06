@@ -14,6 +14,13 @@ sad_words = ["$nsfw"]
 
 jpg_words = ["$jpg"]
 
+mp4_words = ["$mp4"]
+
+f = open('text.txt')
+for line in f.readlines():
+    print(line)
+f.close
+
 starter_encouragements = [
   
   "https://cdn.discordapp.com/attachments/856925480192311307/881587108517666816/ezgif.com-gif-maker.gif",
@@ -307,7 +314,13 @@ async def on_message(message):
     anmmsg = await message.channel.send('你好:se4:唷❤')
     time.sleep(5)
     await anmmsg.delete()
-
+    
+if any(word in msg for word in mp4_words):    
+ f = open('mp4.txt')
+ text = []
+for line in f:
+    text.append(line)
+print(text)
   
 # Bot起動
 client.run(TOKEN)
