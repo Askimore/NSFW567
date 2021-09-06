@@ -16,11 +16,6 @@ jpg_words = ["$jpg"]
 
 mp4_words = ["$mp4"]
 
-f = open('text.txt')
-for line in f.readlines():
-    print(line)
-f.close
-
 starter_encouragements = [
   
   "https://cdn.discordapp.com/attachments/856925480192311307/881587108517666816/ezgif.com-gif-maker.gif",
