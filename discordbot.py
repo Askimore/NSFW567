@@ -256,11 +256,13 @@ jpg = [
 ]
 
 
-mov = [
-  
- with open(mp4.txt) as f: 
-    reader = csv.reader(f) 
-    chosen_row = random.choice(list(reader)) 
+def get_photo():
+a = csv.reader(open(‘data/photo.csv’,‘r’,encoding=‘UTF-8’))
+b = []
+for i in a:
+b.append(",".join(i))
+ 
+ 
   
 ]
 
@@ -322,7 +324,7 @@ async def on_message(message):
 
     
   if any(word in msg for word in mov_words):
-    movmsg = await message.channel.send(mov)
+    movmsg = await message.channel.send(b)
     await message.delete()
     time.sleep(120)
     await movmsg.delete()
