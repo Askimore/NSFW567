@@ -316,13 +316,10 @@ async def on_message(message):
     await anmmsg.delete()
     
 if any(word in msg for word in mp4_words):    
- f = open('mp4.txt')
- text = []
-for line in f:
-    text.append(line)
-print(text)
-  mp4msg = await message.channel.send(random.choice(text))
-    
+path = 'mp4.txt'
+with open(path) as f:
+    for line in f.readlines():
+        print(line)
     
     
     
