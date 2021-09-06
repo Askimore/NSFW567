@@ -14,7 +14,7 @@ sad_words = ["$nsfw"]
 
 jpg_words = ["$jpg"]
 
-mp4_words = ["$mp4"]
+mov_words = ["$mp4"]
 
 starter_encouragements = [
   
@@ -310,11 +310,11 @@ async def on_message(message):
     time.sleep(5)
     await anmmsg.delete()
     
-if any(word in msg for word in mp4_words):    
+if any(word in msg for word in mov_words):    
 path = 'mp4.txt'
 with open(path) as f:
     for line in f.readlines():
-        print(line)
+        movmsg = await message.channel.print(line)
     
     
     
