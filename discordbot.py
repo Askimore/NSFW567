@@ -4,7 +4,6 @@ import googletrans
 import os
 import random
 import time
-import csv
 from pprint import pprint
 # 輸入自己Bot的TOKEN碼
 TOKEN = os.environ['TOKEN']
@@ -14,8 +13,6 @@ client = discord.Client()
 sad_words = ["$nsfw"]
 
 jpg_words = ["$jpg"]
-
-mp4_words = ["$mp4"]
 
 starter_encouragements = [
   
@@ -265,7 +262,7 @@ async def on_ready():
 
     #這邊設定機器當前的狀態文字
     #type可以是playing（遊玩中）、streaming（直撥中）、listening（聆聽中）、watching（觀看中）、custom（自定義）
-    activity_w = discord.Activity(type=discord.ActivityType.playing, name="弄 你 的 臭 🐔 🐔 ", url="https://cn.pornhub.com/view_video.php?viewkey=ph60c597d48e037")
+    activity_w = discord.Activity(type=discord.ActivityType.playing, name=" 弄 你 的 臭 雞 雞", url="https://cn.pornhub.com/view_video.php?viewkey=ph60c597d48e037")
     await client.change_presence(status= status_w, activity=activity_w)
 
 
@@ -310,22 +307,6 @@ async def on_message(message):
     anmmsg = await message.channel.send('好色唷❤')
     time.sleep(5)
     await anmmsg.delete()
-  
-  with open('mp4.csv', newline='') as csvfile:
-
-    rows = csv.reader(csvfile)
-
-  for row in rows:
-    print(row)
- 
-  if any(word in msg for word in mp4_words):
-    gifmsg = await message.channel.send(random.choice(rows(print(row['url'])))
-    await message.delete()
-    time.sleep(120)
-    await gifmsg.delete()
-    ansmsg = await message.channel.send('出來了嗎？❤')
-    time.sleep(5)
-    await ansmsg.delete()   
 
   
 # Bot起動
