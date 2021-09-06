@@ -295,7 +295,7 @@ async def on_message(message):
     await message.delete()
     time.sleep(30)
     await gifmsg.delete()
-    ansmsg = await message.channel.send('出來了嗎？❤')
+    ansmsg = await message.channel.send('你出來了嗎？❤')
     time.sleep(5)
     await ansmsg.delete()  
 
@@ -304,7 +304,7 @@ async def on_message(message):
     await message.delete()
     time.sleep(10)
     await jpgmsg.delete()
-    anmmsg = await message.channel.send('好色唷❤')
+    anmmsg = await message.channel.send('你好:se4:唷❤')
     time.sleep(5)
     await anmmsg.delete()
 
