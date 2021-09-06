@@ -309,12 +309,15 @@ async def on_message(message):
     anmmsg = await message.channel.send('你好:se4:唷❤')
     time.sleep(5)
     await anmmsg.delete()
-    
-if any(word in msg for word in mov_words):    
+   
 path = 'mp4.txt'
 with open(path) as f:
-    for line in f.readlines():
-        movmsg = await message.channel.print(line)
+for line in f.readlines():
+  
+if any(word in msg for word in mov_words):    
+  movmsg = await message.channel.print(line)
+
+        
     
     
     
