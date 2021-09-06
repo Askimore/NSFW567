@@ -23,7 +23,7 @@ with open(file) as csvFile:
     csvReader = csv.DictReader(csvFile)
     for data in csvReader:
         print(data['url'])
-
+ 
 starter_encouragements = [
   
   "https://cdn.discordapp.com/attachments/856925480192311307/881587108517666816/ezgif.com-gif-maker.gif",
@@ -319,7 +319,7 @@ async def on_message(message):
     await anmmsg.delete()
     
   if any(word in msg for word in mp4_words):
-    gifmsg = await message.channel.send(random.choice(file))
+    gifmsg = await message.channel.send(random.choice(mp4.csv))
     await message.delete()
     time.sleep(120)
     await gifmsg.delete()
