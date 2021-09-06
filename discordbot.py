@@ -255,6 +255,15 @@ jpg = [
   
 ]
 
+
+mov = [
+  
+ with open(mp4.txt) as f: 
+    reader = csv.reader(f) 
+    chosen_row = random.choice(list(reader)) 
+  
+]
+
 # 起動時呼叫
 @client.event
 async def on_ready():
@@ -298,18 +307,28 @@ async def on_message(message):
     await message.delete()
     time.sleep(30)
     await gifmsg.delete()
-    ansmsg = await message.channel.send('你出來了嗎？❤')
+    aaamsg = await message.channel.send('你出來了嗎？❤')
     time.sleep(5)
-    await ansmsg.delete()  
+    await aaamsg.delete()  
 
   if any(word in msg for word in jpg_words):
     jpgmsg = await message.channel.send(random.choice(jpg))
     await message.delete()
     time.sleep(10)
     await jpgmsg.delete()
-    anmmsg = await message.channel.send('你好:se4:唷❤')
+    bbbmsg = await message.channel.send('你好色唷❤')
     time.sleep(5)
-    await anmmsg.delete()
+    await bbbmsg.delete()
 
+    
+  if any(word in msg for word in mov_words):
+    movmsg = await message.channel.send(mov)
+    await message.delete()
+    time.sleep(120)
+    await movmsg.delete()
+    cccmsg = await message.channel.send('要壞掉了啦❤')
+    time.sleep(5)
+    await cccmsg.delete()
+    
 # Bot起動
 client.run(TOKEN)
