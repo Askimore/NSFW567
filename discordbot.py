@@ -2,7 +2,6 @@
 import discord
 import googletrans
 import os
-import csv
 import random
 import time
 from pprint import pprint
@@ -14,8 +13,6 @@ client = discord.Client()
 sad_words = ["$nsfw"]
 
 jpg_words = ["$jpg"]
-
-mov_words = ["$mp4"]
 
 starter_encouragements = [
   
@@ -255,8 +252,6 @@ jpg = [
   
 ]
 
-
-
 # 起動時呼叫
 @client.event
 async def on_ready():
@@ -300,18 +295,19 @@ async def on_message(message):
     await message.delete()
     time.sleep(30)
     await gifmsg.delete()
-    aaamsg = await message.channel.send('你出來了嗎？❤')
+    ansmsg = await message.channel.send('出來了嗎？❤')
     time.sleep(5)
-    await aaamsg.delete()  
+    await ansmsg.delete()  
 
   if any(word in msg for word in jpg_words):
     jpgmsg = await message.channel.send(random.choice(jpg))
     await message.delete()
     time.sleep(10)
     await jpgmsg.delete()
-    bbbmsg = await message.channel.send('你好色唷❤')
+    anmmsg = await message.channel.send('好色唷❤')
     time.sleep(5)
-    await bbbmsg.delete()
+    await anmmsg.delete()
 
+  
 # Bot起動
 client.run(TOKEN)
