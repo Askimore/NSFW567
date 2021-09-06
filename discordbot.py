@@ -17,13 +17,6 @@ jpg_words = ["$jpg"]
 
 mp4_words = ["$mp4"]
 
-with open('mp4.csv', newline='') as csvfile:
-
-  rows = csv.reader(csvfile)
-
-for row in rows:
-    print(row)
- 
 starter_encouragements = [
   
   "https://cdn.discordapp.com/attachments/856925480192311307/881587108517666816/ezgif.com-gif-maker.gif",
@@ -317,7 +310,14 @@ async def on_message(message):
     anmmsg = await message.channel.send('好色唷❤')
     time.sleep(5)
     await anmmsg.delete()
-    
+  
+  with open('mp4.csv', newline='') as csvfile:
+
+    rows = csv.reader(csvfile)
+
+  for row in rows:
+    print(row)
+ 
   if any(word in msg for word in mp4_words):
     gifmsg = await message.channel.send(random.choice(rows))
     await message.delete()
