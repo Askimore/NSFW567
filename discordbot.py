@@ -262,9 +262,7 @@ b = []
 for i in a:
 b.append(",".join(i))
  
- 
-  
-]
+
 
 # 起動時呼叫
 @client.event
