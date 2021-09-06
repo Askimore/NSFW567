@@ -4,6 +4,7 @@ import googletrans
 import os
 import random
 import time
+import csv
 from pprint import pprint
 # 輸入自己Bot的TOKEN碼
 TOKEN = os.environ['TOKEN']
@@ -13,6 +14,12 @@ client = discord.Client()
 sad_words = ["$nsfw"]
 
 jpg_words = ["$jpg"]
+
+file = 'mp4.csv'
+with open(file) as csvFile:
+    csvReader = csv.DictReader(csvFile)
+    for data in csvReader:
+        print(data['url'])
 
 starter_encouragements = [
   
@@ -262,7 +269,7 @@ async def on_ready():
 
     #這邊設定機器當前的狀態文字
     #type可以是playing（遊玩中）、streaming（直撥中）、listening（聆聽中）、watching（觀看中）、custom（自定義）
-    activity_w = discord.Activity(type=discord.ActivityType.playing, name="你的臭雞雞", url="https://cn.pornhub.com/view_video.php?viewkey=ph60c597d48e037")
+    activity_w = discord.Activity(type=discord.ActivityType.playing, name="弄 你 的 臭 🐔 🐔 ", url="https://cn.pornhub.com/view_video.php?viewkey=ph60c597d48e037")
     await client.change_presence(status= status_w, activity=activity_w)
 
 
