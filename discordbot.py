@@ -319,7 +319,7 @@ async def on_message(message):
     print(row)
  
   if any(word in msg for word in mp4_words):
-    gifmsg = await message.channel.send(random.choice(rows))
+    gifmsg = await message.channel.send(random.choice(rows(print(row['url'])))
     await message.delete()
     time.sleep(120)
     await gifmsg.delete()
