@@ -261,7 +261,7 @@ a = csv.reader(open(‘https://github.com/Askimore/NSFW567/blob/main/mp4.csv’,
 b = []
 for i in a:
 b.append(",".join(i))
- 
+c = message.channel.send(random.choice(b)
 
 
 # 起動時呼叫
@@ -322,7 +322,7 @@ async def on_message(message):
 
     
   if any(word in msg for word in mov_words):
-    movmsg = await message.channel.send(b)
+    movmsg = await c
     await message.delete()
     time.sleep(120)
     await movmsg.delete()
