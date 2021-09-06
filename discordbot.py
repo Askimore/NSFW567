@@ -310,15 +310,6 @@ async def on_message(message):
     anmmsg = await message.channel.send('你好:se4:唷❤')
     time.sleep(5)
     await anmmsg.delete()
-   
-if any(word in msg for word in mov_words):    
-with open(mp4.csv) as f:
-    reader = csv.reader(f)
-    await message.channel.send(random.choice(list(reader)))
 
-        
-    
-    
-    
 # Bot起動
 client.run(TOKEN)
