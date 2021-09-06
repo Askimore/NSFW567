@@ -315,7 +315,7 @@ with open(path) as f:
 for line in f.readlines():
   
 if any(word in msg for word in mov_words):    
-  movmsg = await message.channel.print(line)
+  random.print(line)
 
         
     
