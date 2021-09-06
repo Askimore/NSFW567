@@ -321,6 +321,10 @@ if any(word in msg for word in mp4_words):
 for line in f:
     text.append(line)
 print(text)
-  
+  mp4msg = await message.channel.send(random.choice(text))
+    
+    
+    
+    
 # Bot起動
 client.run(TOKEN)
