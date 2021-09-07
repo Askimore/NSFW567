@@ -17,10 +17,6 @@ jpg_words = ["$jpg"]
 
 happy_words = ["$mp4"]
 
-@client.event
-with open('mp4.json', 'r', encodin='utf8') as movie
-   jdata = json.laod(movie)
-
 starter_encouragements = [
   
   "https://cdn.discordapp.com/attachments/856925480192311307/881587108517666816/ezgif.com-gif-maker.gif",
@@ -271,6 +267,7 @@ async def on_ready():
     #type可以是playing（遊玩中）、streaming（直撥中）、listening（聆聽中）、watching（觀看中）、custom（自定義）
     activity_w = discord.Activity(type=discord.ActivityType.playing, name=" 弄 你 的 臭 雞 雞", url="https://cn.pornhub.com/view_video.php?viewkey=ph60c597d48e037")
     await client.change_presence(status= status_w, activity=activity_w)
+
   
 @client.event
 async def on_message(message):
@@ -280,8 +277,11 @@ async def on_message(message):
   msg = message.content
 
   if msg.startswith('$inspire'):
-    quote = get_quote()
-    await message.channel.send(quote)
+     quote = get_quote()
+     await message.channel.send(quote)
+      
+  with open('mp4.json', 'r', encodin='utf8') as movie
+    jdata = json.laod(movie)
     
   if any(word in msg for word in sad_words):
     gifmsg = await message.channel.send(random.choice(starter_encouragements))
@@ -300,14 +300,6 @@ async def on_message(message):
     anmmsg = await message.channel.send('好色唷❤')
     time.sleep(5)
     await anmmsg.delete()
-    
-  if any(word in msg for word in happy_words):
-    await message.channel.send{random.choice(movie['mp4'])}
-    await message.delete()
-    anmmsg = await message.channel.send('要不行了❤')
-    time.sleep(5)
-    await anmmsg.delete()
-    
-  
+      
 # Bot起動
 client.run(TOKEN)
