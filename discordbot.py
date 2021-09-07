@@ -15,9 +15,6 @@ sad_words = ["$nsfw"]
 
 jpg_words = ["$jpg"]
 
- with open('mp4.json', 'r') as jfile
-    mp4 = json.laod(jfile)
-
 starter_encouragements = [
   
   "https://cdn.discordapp.com/attachments/856925480192311307/881587108517666816/ezgif.com-gif-maker.gif",
@@ -300,8 +297,11 @@ async def on_message(message):
     time.sleep(5)
     await anmmsg.delete()
     
+with open('mp4.json', 'r') as jfile
+    mp4 = json.laod(jfile)
+ 
 async def ppp(ctx):
-   random_pic = random.choice(mp4['url_pic'])
+   random_pic = random.choice(mp4['mp4'])
    await ctx.send(random_pic)
       
 # Bot起動
