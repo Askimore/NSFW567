@@ -10,7 +10,9 @@ from pprint import pprint
 bot = commands.Bot(command_prefix="$")
 
 with open('setting.json' , 'r') as reader:
-    jdata = json.loads(reader)
+    jf = json.loads(reader.read())
+
+print(jf['url'])
 
 TOKEN = os.environ['TOKEN']
 
@@ -32,7 +34,7 @@ async def on_ready():
       
 @bot.command()
 async def 測試(ctx):
-  random_pic = random.choice(jdata['url'])
+  random_pic = random.choice(jf['url'])
   await ctx.send(random_pic)
 
       
