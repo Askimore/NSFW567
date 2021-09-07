@@ -9,8 +9,8 @@ from pprint import pprint
 # 輸入自己Bot的TOKEN碼
 bot = commands.Bot(command_prefix='$')
 
-with open('setting.json', 'r', encoding='utf8') as jfile
-   jdata = json.load(jfile)
+with open('setting.json' , 'r') as reader:
+    jf = json.loads(reader.read())
 
 TOKEN = os.environ['TOKEN']
 
@@ -34,7 +34,7 @@ async def on_ready():
 
 async def web(ctx):
    
-     random_pic = random.choice(jdata['mp4'])
+     random_pic = random.choice(jf['mp4'])
      await ctx.send(random_pic)
 
       
