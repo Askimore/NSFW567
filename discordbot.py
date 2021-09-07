@@ -12,8 +12,6 @@ bot = commands.Bot(command_prefix="$")
 with open('setting.json' , 'r') as reader:
     jf = json.loads(reader.read())
 
-text = print(jf['url'])
-
 TOKEN = os.environ['TOKEN']
 
 client = discord.Client()
