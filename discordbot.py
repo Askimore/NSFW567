@@ -15,7 +15,10 @@ sad_words = ["$nsfw"]
 
 jpg_words = ["$jpg"]
 
-happy_words = ["$mp4"]
+mp4_words = ["$mp4"]
+
+ with open('mp4.json', 'r', encodin='utf8') as mp4
+    jdata = json.laod(mp4)
 
 starter_encouragements = [
   
@@ -280,8 +283,6 @@ async def on_message(message):
      quote = get_quote()
      await message.channel.send(quote)
       
-  with open('mp4.json', 'r', encodin='utf8') as movie
-    jdata = json.laod(movie)
     
   if any(word in msg for word in sad_words):
     gifmsg = await message.channel.send(random.choice(starter_encouragements))
@@ -300,6 +301,11 @@ async def on_message(message):
     anmmsg = await message.channel.send('好色唷❤')
     time.sleep(5)
     await anmmsg.delete()
+    
+@client.event
+async def web(ctx):
+   random_pic = random.choice(mp4['url'])
+   await ctx.send(random_pic)
       
 # Bot起動
 client.run(TOKEN)
