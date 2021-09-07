@@ -29,6 +29,13 @@ async def on_ready():
     activity_w = discord.Activity(type=discord.ActivityType.playing, name=" 弄 你 的 臭 雞 雞", url="https://cn.pornhub.com/view_video.php?viewkey=ph60c597d48e037")
     await client.change_presence(status= status_w, activity=activity_w)
     
+      
+@bot.command()
+
+async def web(ctx):
+   
+     random_pic = random.choice(jdata['mp4'])
+     await ctx.send(random_pic)
 
       
 # Bot起動
