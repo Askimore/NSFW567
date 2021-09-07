@@ -17,11 +17,10 @@ jpg_words = ["$jpg"]
 
 mp4_words = ["$mp4"]
 
-f = open('mp4.txt')
-mp4 = []
-for line in f:
-    text.append(line)
-
+with open('mp4.csv', newline='') as csvfile:
+  rows = csv.DictReader(csvfile)
+ for row in rows:
+    print(row['url'])
 
 starter_encouragements = [
   
@@ -318,7 +317,7 @@ async def on_message(message):
     await anmmsg.delete()
     
   if any(word in msg for word in mp4_words):
-    mp4msg = await message.channel.send(random.choice(mp4))
+    mp4msg = await message.channel.send(random.choice(url))
     await message.delete()
     time.sleep(10)
     await mp4msg.delete()
