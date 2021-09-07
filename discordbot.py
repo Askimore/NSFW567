@@ -9,6 +9,9 @@ from pprint import pprint
 # 輸入自己Bot的TOKEN碼
 bot = commands.Bot(command_prefix='$')
 
+with open('setting.json', 'r', encoding='utf8') as jfile
+   jdata = json.load(jfile)
+
 TOKEN = os.environ['TOKEN']
 
 client = discord.Client()
