@@ -15,7 +15,7 @@ sad_words = ["$nsfw"]
 
 jpg_words = ["$jpg"]
 
-mp4_words = ["$jpg"]
+mp4_words = ["$mp4"]
 
 starter_encouragements = [
   
@@ -272,7 +272,7 @@ async def on_ready():
 
     #這邊設定機器當前的狀態文字
     #type可以是playing（遊玩中）、streaming（直撥中）、listening（聆聽中）、watching（觀看中）、custom（自定義）
-    activity_w = discord.Activity(type=discord.ActivityType.playing, name=" 弄 你 的 臭 雞 雞 🍆👅💦")
+    activity_w = discord.Activity(type=discord.ActivityType.playing, name="🍆👅💦")
     await client.change_presence(status= status_w, activity=activity_w)
 
 
