@@ -17,6 +17,9 @@ jpg_words = ["$jpg"]
 
 mp4_words = ["$mp4"]
 
+with open('mp4.json', 'r', encodin='utf8') as mp4
+   jdata = json.laod(mp4)
+
 starter_encouragements = [
   
   "https://cdn.discordapp.com/attachments/856925480192311307/881587108517666816/ezgif.com-gif-maker.gif",
@@ -308,6 +311,13 @@ async def on_message(message):
     time.sleep(10)
     await jpgmsg.delete()
     anmmsg = await message.channel.send('好色唷❤')
+    time.sleep(5)
+    await anmmsg.delete()
+    
+  if any(word in msg for word in mp4_words):
+    await message.channel.send(random.choice(mp4))
+    await message.delete()
+    anmmsg = await message.channel.send('要不行了❤')
     time.sleep(5)
     await anmmsg.delete()
     
