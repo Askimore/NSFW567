@@ -15,10 +15,10 @@ sad_words = ["$nsfw"]
 
 jpg_words = ["$jpg"]
 
-mp4_words = ["$mp4"]
+movie_words = ["$mp4"]
 
-with open('mp4.json', 'r', encodin='utf8') as mp4
-   jdata = json.laod(mp4)
+with open('mp4.json', 'r', encodin='utf8') as movie
+   jdata = json.laod(movie)
 
 starter_encouragements = [
   
@@ -270,20 +270,6 @@ async def on_ready():
     #type可以是playing（遊玩中）、streaming（直撥中）、listening（聆聽中）、watching（觀看中）、custom（自定義）
     activity_w = discord.Activity(type=discord.ActivityType.playing, name=" 弄 你 的 臭 雞 雞", url="https://cn.pornhub.com/view_video.php?viewkey=ph60c597d48e037")
     await client.change_presence(status= status_w, activity=activity_w)
-
-
-      
-@client.event
-async def on_message(message):
-  if message.author == client.user:
-    return
-
-  msg = message.content
-
-  if msg.startswith('$inspire'):
-    quote = get_quote()
-    await message.channel.send(quote)
-  
   
 @client.event
 async def on_message(message):
@@ -314,8 +300,8 @@ async def on_message(message):
     time.sleep(5)
     await anmmsg.delete()
     
-  if any(word in msg for word in mp4_words):
-    await message.channel.send(random.choice(mp4))
+  if any(word in msg for word in movie_words):
+    await message.channel.send(random.choice(movie))
     await message.delete()
     anmmsg = await message.channel.send('要不行了❤')
     time.sleep(5)
