@@ -3,5 +3,5 @@
   "description": "Herokuでdiscord.pyを始めるテンプレート",
   "repository": "https://github.com/DiscordBotPortalJP/discordpy-startup",
   "keywords": ["python", "discord", "bot"]
-  "cwd":"${fileDirname}"
+  "cwd": "${fileDirname}"
 }
