@@ -15,8 +15,9 @@ sad_words = ["$nsfw"]
 
 jpg_words = ["$jpg"]
 
-movie_words = ["$mp4"]
+happy_words = ["$mp4"]
 
+@client.event
 with open('mp4.json', 'r', encodin='utf8') as movie
    jdata = json.laod(movie)
 
@@ -300,8 +301,8 @@ async def on_message(message):
     time.sleep(5)
     await anmmsg.delete()
     
-  if any(word in msg for word in movie_words):
-    await message.channel.send(random.choice(movie['mp4']))
+  if any(word in msg for word in happy_words):
+    await message.channel.send{random.choice(movie['mp4'])}
     await message.delete()
     anmmsg = await message.channel.send('要不行了❤')
     time.sleep(5)
