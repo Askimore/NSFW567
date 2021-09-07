@@ -301,7 +301,7 @@ async def on_message(message):
     await anmmsg.delete()
     
   if any(word in msg for word in movie_words):
-    await message.channel.send(random.choice(movie))
+    await message.channel.send(random.choice(movie['mp4']))
     await message.delete()
     anmmsg = await message.channel.send('要不行了❤')
     time.sleep(5)
