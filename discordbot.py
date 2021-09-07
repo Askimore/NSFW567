@@ -38,9 +38,9 @@ async def 測試(ctx):
   await ctx.send(random_pic)
     
     
-@bot.command()
+
 async def 123(ctx):
-    await message.channel.send("")
+await message.channel.send("")
 
       
 # Bot起動
