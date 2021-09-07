@@ -15,8 +15,8 @@ sad_words = ["$nsfw"]
 
 jpg_words = ["$jpg"]
 
- with open('mp4.json', 'r', encodin='utf8') as movie
-    jdata = json.laod(movie)
+ with open('mp4.json', 'r', encoding='utf8') as jFile
+    jdata = json.laod(jFile)
 
 starter_encouragements = [
   
@@ -300,8 +300,8 @@ async def on_message(message):
     time.sleep(5)
     await anmmsg.delete()
     
-async def web(ctx):
-   random_pic = random.choice(movie['url'])
+async def $mp4(ctx):
+   random_pic = random.choice(movie['url_pic'])
    await ctx.send(random_pic)
       
 # Bot起動
