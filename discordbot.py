@@ -5,8 +5,11 @@ import os
 import json
 import random
 import time
+from discord.ext import commands
 from pprint import pprint
 # 輸入自己Bot的TOKEN碼
+bot = commands.bot(command_prefix='$')
+
 TOKEN = os.environ['TOKEN']
 
 client = discord.Client()
@@ -299,10 +302,12 @@ async def on_message(message):
     anmmsg = await message.channel.send('好色唷❤')
     time.sleep(5)
     await anmmsg.delete()
+    
+@bot.commands
 
-async def 影片(ctx):
-  random_pic = random.choice(jdata['url'])
-  await ctx.send(random_pic)
+  async def 影片(ctx):
+    random_pic = random.choice(jdata['url'])
+    await ctx.send(random_pic)
       
 # Bot起動
 client.run(TOKEN)
