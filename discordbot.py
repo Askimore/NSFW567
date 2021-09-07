@@ -18,8 +18,8 @@ sad_words = ["$nsfw"]
 
 jpg_words = ["$jpg"]
 
-with open('mp4.json', 'r',encoding='utf8') as jfile
- jdata = json.load(jfile)
+with open('mp4.json', 'r') as mp4file
+ mov = json.load(mp4file)
 
 starter_encouragements = [
   
@@ -305,7 +305,7 @@ async def on_message(message):
     
 @bot.command()
   async def 影片(ctx):
-    random_pic = random.choice(jdata['url'])
+    random_pic = random.choice(mov['url'])
     await ctx.send(random_pic)
       
 # Bot起動
