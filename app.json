@@ -4,7 +4,7 @@
   "repository": "https://github.com/DiscordBotPortalJP/discordpy-startup",
   "keywords": ["python", "discord", "bot"],
   "cwd":"${fileDirname}"
-  "version": "0.2.0",
+  "version":"0.2.0",
   "configurations": [
        {
            "name": "Python: Current Dir (external)",
