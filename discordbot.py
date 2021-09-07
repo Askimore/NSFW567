@@ -34,7 +34,7 @@ async def on_ready():
 
 async def web(ctx):
    
-     random_pic = random.choice(jf['mp4'])
+     random_pic = random.choice(jf['url'])
      await ctx.send(random_pic)
 
       
