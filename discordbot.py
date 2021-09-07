@@ -2,6 +2,7 @@
 import discord
 import googletrans
 import os
+import csv
 import random
 import time
 from pprint import pprint
@@ -13,6 +14,14 @@ client = discord.Client()
 sad_words = ["$nsfw"]
 
 jpg_words = ["$jpg"]
+
+mp4_words = ["$mp4"]
+
+f = open('mp4.txt')
+mp4 = []
+for line in f:
+    text.append(line)
+
 
 starter_encouragements = [
   
@@ -304,6 +313,15 @@ async def on_message(message):
     await message.delete()
     time.sleep(10)
     await jpgmsg.delete()
+    anmmsg = await message.channel.send('好色唷❤')
+    time.sleep(5)
+    await anmmsg.delete()
+    
+  if any(word in msg for word in mp4_words):
+    mp4msg = await message.channel.send(random.choice(mp4))
+    await message.delete()
+    time.sleep(10)
+    await mp4msg.delete()
     anmmsg = await message.channel.send('好色唷❤')
     time.sleep(5)
     await anmmsg.delete()
