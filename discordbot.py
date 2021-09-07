@@ -1,10 +1,10 @@
 
 import discord
+from discord.ext import commands
 import os
 import json
 import random
 import time
-from discord.ext import commands
 from pprint import pprint
 # 輸入自己Bot的TOKEN碼
 bot = commands.Bot(command_prefix='$')
@@ -13,7 +13,7 @@ TOKEN = os.environ['TOKEN']
 
 client = discord.Client()
 
-with open('mp4.json', 'r') as Jfile
+with open('setting.json', 'r') as Jfile
  jdata = json.load(Jfile)
 
 # 起動時呼叫
