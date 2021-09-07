@@ -32,7 +32,7 @@ async def on_ready():
     await client.change_presence(status= status_w, activity=activity_w)
     
       
-@bot.command()
+@bot.event()
 async def 測試(ctx):
   random_pic = random.choice(text)
   await ctx.send(random_pic)
