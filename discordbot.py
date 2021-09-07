@@ -303,8 +303,7 @@ async def on_message(message):
     time.sleep(5)
     await anmmsg.delete()
     
-@bot.commands
-
+@bot.command()
   async def 影片(ctx):
     random_pic = random.choice(jdata['url'])
     await ctx.send(random_pic)
