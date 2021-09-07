@@ -13,9 +13,6 @@ TOKEN = os.environ['TOKEN']
 
 client = discord.Client()
 
-with open('setting.json', 'r') as Jfile
- jdata = json.load(Jfile)
-
 # 起動時呼叫
 @client.event
 async def on_ready():
