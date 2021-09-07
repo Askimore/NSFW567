@@ -1,10 +1,9 @@
 {
-  "name": "discordpy-startup",
-  "description": "Herokuでdiscord.pyを始めるテンプレート",
-  "repository": "https://github.com/DiscordBotPortalJP/discordpy-startup",
-  "keywords": ["python", "discord", "bot"],
-  "version":"0.2.0",
-  "configurations": [
+   // Use IntelliSense to find out which attributes exist for C# debugging
+   // Use hover for the description of the existing attributes
+   // For further information visit https://github.com/OmniSharp/omnishar...
+   "version": "0.2.0",
+   "configurations": [
        {
            "name": "Python: Current Dir (external)",
            "type": "python",
