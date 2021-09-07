@@ -296,13 +296,7 @@ async def on_message(message):
     anmmsg = await message.channel.send('好色唷❤')
     time.sleep(5)
     await anmmsg.delete()
-    
-with open('mp4.json', 'r') as jfile
-    mp4 = json.laod(jfile)
- 
-async def ppp(ctx):
-   random_pic = random.choice(mp4['mp4'])
-   await ctx.send(random_pic)
+
       
 # Bot起動
 client.run(TOKEN)
