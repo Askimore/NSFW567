@@ -301,7 +301,7 @@ async def on_message(message):
     await anmmsg.delete()
     
 async def $mp4(ctx):
-   random_pic = random.choice(jfile['url_pic'])
+   random_pic = random.choice(jdata['url_pic'])
    await ctx.send(random_pic)
       
 # Bot起動
