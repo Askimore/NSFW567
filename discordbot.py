@@ -257,6 +257,7 @@ jpg = [
 
 mp4 = [
 
+
   "https://cdn.discordapp.com/attachments/884435564693160056/884435743924174888/3HlPAMw1UyWjdoSS.mp4",
   "https://cdn.discordapp.com/attachments/884435564693160056/884475885363802172/3HlPAMw1UyWjdoSR.mp4",
   "https://cdn.discordapp.com/attachments/884435564693160056/884829351235964938/tumblr_p96zwarNgo1wwr1ds.mp4",
@@ -405,8 +406,42 @@ mp4 = [
   "https://cdn.discordapp.com/attachments/700217350456213515/882673628745986108/-.mp4",
   "https://cdn.discordapp.com/attachments/700217350456213515/882867589976559646/8ngbC8JPaEyYVfT8.mp4",
   "https://cdn.discordapp.com/attachments/700217350456213515/883223634628476928/VID_20210903_133420_058.mp4",
-  "https://cdn.discordapp.com/attachments/700217350456213515/884070017514233876/wo-huan-bu-qu-mai-re-gou.mp4"
-    
+  "https://cdn.discordapp.com/attachments/700217350456213515/884070017514233876/wo-huan-bu-qu-mai-re-gou.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885103855338139688/online-video-cutter.com_1.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885103823474003998/31796351a.webm",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885103823188807710/31796331a.webm",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885099534785589298/69395c65c8be92bb.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885099514359328788/xdianying_846.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885099506184646676/7ca070bd0a7a4635.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885099493928865822/xdianying_686.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885099481190764574/1013gangan_.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885098939211214908/video_2021-09-03_20-07-55.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885098917514072114/video_2021-06-10_00-14-04.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885098907858767872/video_2021-06-10_00-15-38.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885098907858767872/video_2021-06-10_00-15-38.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885098903584796712/video_2021-06-10_00-22-22.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885098881317228554/video_2021-06-10_00-14-50.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885098855727771658/video_2021-04-18_02-04-53.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885098786085560340/video_2021-05-09_11-56-02.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885098742938763294/IMG_3826.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885098711674413126/IMG_7133.mov",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885098707572391966/IMG_6643.MP4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885098698458169364/IMG_6644.MP4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885098690715455518/IMG_6641.MP4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885098685216735254/IMG_6642.MP4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885098677264338944/IMG_6640.MP4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885098644922060840/IMG_4954.MP4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885098589515288617/IMG_2987.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885098440713965568/IMG_1636.MP4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885098228297637888/F910773AAA5F3C572B550D2A1CEABE35.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885098018737647626/210112163420.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885097757277306890/647bba344396e7c8170902bcf2e15551.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885097693704249354/5fa987a927d7e2bc7e7f0_source.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885097651060744242/LittIe3.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885097628705103882/3.mp4",
+  "https://cdn.discordapp.com/attachments/884435564693160056/885097599181398076/6D65C3623926D4EFBCEA947C93762586.mp4"
+
+
 ]
 
 # 起動時呼叫
