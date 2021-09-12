@@ -584,26 +584,22 @@ async def on_message(message):
   if any(word in msg for word in sad_words):
     gifmsg = await message.channel.send(random.choice(starter_encouragements))
     await message.delete()
-    time.sleep(30)
-    await gifmsg.delete()
     aaamsg = await message.channel.send('出來了嗎？❤')
-    time.sleep(5)
+    time.sleep(10)
     await aaamsg.delete()  
 
   if any(word in msg for word in jpg_words):
     jpgmsg = await message.channel.send(random.choice(jpg))
     await message.delete()
-    time.sleep(10)
-    await jpgmsg.delete()
     bbbmsg = await message.channel.send('好色唷❤')
-    time.sleep(5)
+    time.sleep(10)
     await bbbmsg.delete()
     
   if any(word in msg for word in mp4_words):
     jpgmsg = await message.channel.send(random.choice(mp4))
     await message.delete()
     cccmsg = await message.channel.send('要不行了啦❤')
-    time.sleep(5)
+    time.sleep(10)
     await cccmsg.delete()
 
   
