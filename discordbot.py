@@ -17,6 +17,8 @@ jpg_words = ["$jpg"]
 
 mp4_words = ["$mp4"]
 
+HaneAme_words = ["$haneame"]
+
 gif = [
   
   
@@ -33,6 +35,8 @@ mp4 = [
 
   
 ]
+
+
 
 # 起動時呼叫
 @client.event
@@ -87,12 +91,23 @@ async def on_message(message):
     await bbbmsg.delete()
     
   if any(word in msg for word in mp4_words):
-    jpgmsg = await message.channel.send(random.choice(mp4))
+    mp4msg = await message.channel.send(random.choice(mp4))
     await message.delete()
     cccmsg = await message.channel.send('要不行了啦❤')
     time.sleep(10)
     await cccmsg.delete()
 
-  
+if any(word in msg for word in HaneAme_words):
+    path = 'text.txt'
+    with open(path) as f:
+    lines = f.readlines()
+    for line in lines:
+        print(line)
+    await message.delete()
+    cccmsg = await message.channel.send('好色呢❤')
+    time.sleep(10)
+    await cccmsg.delete()  
+
+
 # Bot起動
 client.run(TOKEN)
