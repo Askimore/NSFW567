@@ -7,7 +7,9 @@ import json
 import time
 from pprint import pprint
 # 輸入自己Bot的TOKEN碼
-TOKEN = os.environ['TOKEN']
+
+TOKEN = ['ODgyNjcyNDA0MTMwODU2OTkw.YS-yvA.ZyTwJG8hRJs9ytDMlfCSch3B9Lc
+']
 
 client = discord.Client()
 
