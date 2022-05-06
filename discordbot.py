@@ -17,8 +17,6 @@ jpg_words = ["$jpg"]
 
 mp4_words = ["$mp4"]
 
-haneame_words = ["$haneame"]
-
 gif = [
   
   
@@ -96,17 +94,6 @@ async def on_message(message):
     cccmsg = await message.channel.send('要不行了啦❤')
     time.sleep(10)
     await cccmsg.delete()
-
-if any(word in msg for word in haneame_words):
-    path = 'text.txt'
-    with open(path) as f:
-    lines = f.readlines()
-    for line in lines:
-        print(line)
-    await message.delete()
-    cccmsg = await message.channel.send('好色呢❤')
-    time.sleep(10)
-    await cccmsg.delete()  
 
 
 # Bot起動
