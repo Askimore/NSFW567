@@ -17,7 +17,7 @@ jpg_words = ["$jpg"]
 
 mp4_words = ["$mp4"]
 
-HaneAme_words = ["$haneame"]
+haneame_words = ["$haneame"]
 
 gif = [
   
@@ -97,7 +97,7 @@ async def on_message(message):
     time.sleep(10)
     await cccmsg.delete()
 
-if any(word in msg for word in HaneAme_words):
+if any(word in msg for word in haneame_words):
     path = 'text.txt'
     with open(path) as f:
     lines = f.readlines()
