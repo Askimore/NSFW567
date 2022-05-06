@@ -8,8 +8,7 @@ import time
 from pprint import pprint
 # 輸入自己Bot的TOKEN碼
 
-TOKEN = ['ODgyNjcyNDA0MTMwODU2OTkw.YS-yvA.ZyTwJG8hRJs9ytDMlfCSch3B9Lc
-']
+TOKEN = os.environ['TOKEN']
 
 client = discord.Client()
 
